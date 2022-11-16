@@ -73,7 +73,7 @@ def add_pets_from_json(filename, cur, conn):
         cur.execute('SELECT id from Species WHERE title = ?', (species,)) #comma bc (species,) is a tuple
         species_id = int(cur.fetchone()[0])
 
-        cur.execute("INSERT INTO Patients (pet_id, name, species_id, age, cuteness, aggressiveness) VALUES (?,?,?,?,?,?)", (pet_id, name, species_id, age, cuteness, agressiveness))
+        cur.execute("INSERT INTO Patients (pe_id, name, species_id, age, cuteness, aggressiveness) VALUES (?,?,?,?,?,?)", (pet_id, name, species_id, age, cuteness, agressiveness))
 
         pet_id += 1
     conn.commit()
